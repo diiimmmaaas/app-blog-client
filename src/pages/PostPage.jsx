@@ -32,7 +32,7 @@ export const PostPage = () => {
                 <Link className={"flex"} to={"/"}>Назад</Link>
             </button>
 
-            <div className={"flex gap-10 py-8"}>
+            <div className={"flex gap-10 py-8 px-4"}>
                 <div className={"w-2/3"}>
                     <div className={"flex flex-col basis-1/4 flex-grow"}>
                         <div className={post.imgUrl ? "flex rounded-sm h-80 " : "flex rounded-sm"}>

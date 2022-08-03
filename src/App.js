@@ -2,7 +2,7 @@ import {Layout} from "./components/Layout";
 import {Routes, Route} from "react-router-dom";
 
 import {MainPage} from "./pages/MainPage";
-import {PostsPage} from "./pages/PostsPage";
+import {MyPostsPage} from "./pages/MyPostsPage";
 import {PostPage} from "./pages/PostPage";
 import {AddPostPage} from "./pages/AddPostPage";
 import {RegisterPage} from "./pages/RegisterPage";
@@ -26,7 +26,7 @@ function App() {
         <Layout>
             <Routes>
                 <Route path={"/"} element={<MainPage/>}/>
-                <Route path={"posts"} element={<PostsPage/>}/>
+                <Route path={"posts"} element={<MyPostsPage/>}/>
                 <Route path={":id"} element={<PostPage/>}/>
                 <Route path={"new"} element={<AddPostPage/>}/>
                 <Route path={"register"} element={<RegisterPage/>}/>
