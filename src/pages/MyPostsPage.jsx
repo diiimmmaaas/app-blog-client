@@ -10,7 +10,6 @@ export const MyPostsPage = () => {
         try {
             const {data} = await instance.get("/posts/user/me")
             setPosts(data)
-            console.log(data);
         } catch (error) {
             console.log(error);
         }
