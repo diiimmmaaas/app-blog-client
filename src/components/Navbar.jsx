@@ -59,7 +59,7 @@ export const Navbar = () => {
 
             <div className={"flex justify-center items-center bg-gray-600 text-xs text-white rounded-sm px-4 py-2"}>
                 {
-                    isAuth ? (<button onClick={logoutHandler}>Выйти</button>) : <Link to={"/login"}>Войти</Link>
+                    isAuth ? (<Link to={"/login"} onClick={logoutHandler}>Выйти</Link>) : <Link to={"/login"}>Войти</Link>
                 }
             </div>
         </div>

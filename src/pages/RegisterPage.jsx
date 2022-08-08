@@ -8,7 +8,6 @@ export const RegisterPage = () => {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    const [repeatPassword, setRepeatPassword] = useState("")
 
     const {status} = useSelector(state => state.auth)
     const isAuth = useSelector(checkIsAuth)
@@ -30,7 +29,6 @@ export const RegisterPage = () => {
             dispatch(registerUser({username, password}))
             setUsername("")
             setPassword("")
-            setRepeatPassword("")
         } catch (error) {
             console.log(error);
         }
@@ -55,15 +53,6 @@ export const RegisterPage = () => {
                 <input type={"password"}
                        value={password}
                        onChange={e => setPassword(e.target.value)}
-                       placeholder={"Password"}
-                       className={"mt-1 text-black w-full rounded-lg bg-gray-400 border py-1 px-2 text-xs outline-none placeholder:text-gray-700"}
-                />
-            </label>
-            <label className={"text-xs text-gray-400"}>
-                Repeat password:
-                <input type={"password"}
-                       value={repeatPassword}
-                       onChange={e => setRepeatPassword(e.target.value)}
                        placeholder={"Password"}
                        className={"mt-1 text-black w-full rounded-lg bg-gray-400 border py-1 px-2 text-xs outline-none placeholder:text-gray-700"}
                 />
